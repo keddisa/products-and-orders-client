@@ -75,7 +75,10 @@ export default function Products() {
     return orders.map(({id, orderItems, orderStatus, shippingAddress, totalValue, createdAt}, index) => {
       return <tr key={index} onClick = {() => onRowClick(id || '')} className='hoverable'>
         <RowCell>{id}</RowCell>
-        <RowCell>{orderItems.length}</RowCell>
+        <RowCell>{
+          //@ts-ignore
+          JSON.parse(orderItems[0]).quantity
+        }</RowCell>
         <RowCell>${totalValue}</RowCell>
         <RowCell>{shippingAddress}</RowCell>
         <RowCell>{orderStatus}</RowCell>
