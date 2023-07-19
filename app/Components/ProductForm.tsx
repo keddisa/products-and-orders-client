@@ -90,7 +90,7 @@ const ProductSchema = z.object({
   name: z
     .string()
     .min(8, 'Name should be at least 8 characters long')
-    .max(32, 'Name should be at most 32 characters long'),
+    .max(64, 'Name should be at most 64 characters long'),
   unitPrice: z.number().positive('Must be a positive number'),
   quantity: z.number().positive('Must be a positive number'),
 });
