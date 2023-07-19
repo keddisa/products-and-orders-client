@@ -246,7 +246,7 @@ export default function UpdateOrderForm(props: Props) {
         </SummaryDetail>
         <SummarySubtitle>Shipping Address: <span style={{fontSize: '0.8em', marginLeft: '1em'}}>{props.order.shippingAddress}</span></SummarySubtitle>
         <SummarySubtitle>Order Status: <span style={{fontSize: '0.8em', marginLeft: '1em'}}>{props.order.orderStatus}</span></SummarySubtitle>
-        <SummarySubtitle>Total Value: <span style={{fontSize: '0.8em', marginLeft: '1em'}}>{props.order.totalValue}</span></SummarySubtitle>
+        <SummarySubtitle>Total Value: <span style={{fontSize: '0.8em', marginLeft: '1em'}}>${props.order.totalValue}</span></SummarySubtitle>
         <SummarySubtitle>Tracking Number: <span style={{fontSize: '0.8em', marginLeft: '1em'}}>{props.order.trackingNumber ? props.order.trackingNumber : 'Tracking number is not available'}</span></SummarySubtitle>
         <SummarySubtitle>Tracking Company: <span style={{fontSize: '0.8em', marginLeft: '1em'}}>{props.order.trackingCompany ? props.order.trackingCompany : 'Tracking company is not available'}</span></SummarySubtitle>
         <SummarySubtitle>Date of Order: <span style={{fontSize: '0.8em', marginLeft: '1em'}}>{props.order.createdAt}</span></SummarySubtitle>

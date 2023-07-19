@@ -76,7 +76,7 @@ export default function Products() {
       return <tr key={index} onClick = {() => onRowClick(id || '')} className='hoverable'>
         <RowCell>{id}</RowCell>
         <RowCell>{orderItems.length}</RowCell>
-        <RowCell>{totalValue}</RowCell>
+        <RowCell>${totalValue}</RowCell>
         <RowCell>{shippingAddress}</RowCell>
         <RowCell>{orderStatus}</RowCell>
         <RowCell>{createdAt}</RowCell>
