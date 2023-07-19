@@ -105,3 +105,16 @@ a {
     color-scheme: dark;
   }
 }
+
+.hoverable:hover {
+  transform: translateY(-2px) scale(1.03);
+  filter: brightness(70%);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid white;
+}

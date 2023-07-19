@@ -1,34 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Serverless Backend for Products and Orders
 
-## Getting Started
+## Running this Project Locally
 
-First, run the development server:
+To run the development server, run this command
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<hr>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Access the Application in Production
 
-## Learn More
+<hr>
 
-To learn more about Next.js, take a look at the following resources:
+ ## Choice of frameworks and libraries
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- I understand that Reebelo uses React/ Nextjs with typescript as a frontend library, so I went ahead and built the application with Nextjs with typescript
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Formik and zod have been used for form management and validation
 
-## Deploy on Vercel
+- Styled components have been used for styling the application
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<hr>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Functionality
+
+- The landing page of the application will present all the current products as a list of cards, with a CTA to add a new product
+
+- When one of the card is clicked, a user can edit the product name/ quanitity/ price, delete the product or return to the previous page
+
+- A user can view existing orders by clicking on the "Orders" from the side nav
+
+- On the Orders page, a user can either add a new order or click into one of the existing products
+
+- Upon clicking on "Place a new order", a drop down with existing products are presented to the user, along with a choice of required quantity and shipping address.
+
+- An assumption has been made that Quantity, Product and Shipping address can't be updated, but Order status and shipping status can.
+
+- Upon submission there is a validation layer to verify that the quantity of ordered products are less than or equal the available quantity.
+
+## Limitations
+
+- The application is not currently fully mobile responsive. There are some basic responsiveness when it comes to the product cards grid, other elements in the app are not
+
+- The backend allows for multiple products for a single order, but the frontend doesn't at this point
+
+- There is no authentication layer for this application. Currently the same user can place an order, add a product, update an order, update a product.. etc. There is no layer of user permission implemented in the app
+
