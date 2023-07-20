@@ -114,11 +114,6 @@ export default function Products() {
           </tbody>
         </Table>
       </div>
-
-      {/* <Grid>
-        {renderProducts()}
-        <GridItem onClick = {onProductAddClick}><AddProductCard/></GridItem>
-      </Grid> */}
     </>}
   </Wrapper>
   )
